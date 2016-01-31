@@ -27,33 +27,35 @@ jQuery(document).ready(function($){
 
 	defaultimages.init();
 
-	$('.faces.square').mousemove(function (e){
+	$('.faces').mousemove(function (e){
 		// find the exposition of mouse inside the wrapper
 	    var elm = $(this);
 	    var xPos = e.pageX - elm.offset().left;
+		var faceStyle = $(this).attr('id');
+		console.log(faceStyle);
 	    console.log(xPos);
 
 		if ( xPos <= firstThirdBoundary ) {
 			// if in first third show left angled face
 			console.log('this is the first third');
-			$('.faces').find('.face-1').show();
-			$('.faces').find('.face-2').hide();
+			$('.faces#' + faceStyle).find('.face-1').show();
+			$('.faces#' + faceStyle).find('.face-2').hide();
 		} else if ( xPos >= lastThirdBoundary ) {
 			// if in first third show front forward face
 			console.log('this is the middle third');
-			$('.faces').find('.face-3').show();
-			$('.faces').find('.face-2').hide();
+			$('.faces#' + faceStyle).find('.face-3').show();
+			$('.faces#' + faceStyle).find('.face-2').hide();
 		} else {
 			// if in first third show right angled face
 			console.log('this is the last third');
-			$('.faces').find('.face-2').show();
-			$('.faces').find('.face-1').hide();
-			$('.faces').find('.face-3').hide();
+			$('.faces#' + faceStyle).find('.face-2').show();
+			$('.faces#' + faceStyle).find('.face-1').hide();
+			$('.faces#' + faceStyle).find('.face-3').hide();
 		}
 	});
 
 	// When the mouse leaves the area, return images to page loaded state
-	$('.faces.square').mouseleave(function (e) {
+	$('.faces').mouseleave(function (e) {
 		defaultimages.init();
 	});
 
