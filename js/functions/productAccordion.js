@@ -1,18 +1,29 @@
 var productAccordion = {
 
     init: function() {
-        $('.accordion-item').hide();
-        $('.accrodion-item').first().show();
+        // $('.accordion-item').hide();
+        // $('.accrodion-item').first().show();
     },
 
     clicked: function() {
         $('.accordion-nav a').click(function(event){
             event.preventDefault();
 
-            var clickedItem = $(this).attr('href');
+            var clickedItemContent = $(this).attr('href');
+            // console.log('accordion-item'clickedItemContent);
 
-            $(this).toggleClass('active');
-            clickedItem.slideToggle().addClass('active');
+            if ( $(this).hasClass('active') ) {
+                $(this).removeClass('active');
+                $('.accordion-item' + clickedItemContent)
+                    .removeClass('active')
+                    .hide();
+            } else {
+                $(this)
+                    .addClass('active')
+                $('.accordion-item' + clickedItemContent)
+                    .addClass('active').show()
+                    .siblings().removeClass('active').hide();
+            }
         });
     }
 }

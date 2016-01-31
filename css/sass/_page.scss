@@ -18,7 +18,7 @@
         width: 24%;
         text-align: center;
         transition: 0.5s all ease-in-out;
-        
+
         &:hover {
             background: #E7E7E8;
             transition: 0.5s all ease-in-out;
@@ -26,7 +26,15 @@
     }
 }
 
-.faces {
+.accordion-item {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.faces-set {
     margin-top: 0;
     border: none;
 }

@@ -1270,7 +1270,12 @@ h1, h2 {
       background: #E7E7E8;
       transition: 0.5s all ease-in-out; }
 
-.faces {
+.accordion-item {
+  display: none; }
+  .accordion-item.active {
+    display: block; }
+
+.faces-set {
   margin-top: 0;
   border: none; }
 
