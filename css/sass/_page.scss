@@ -15,9 +15,13 @@
 
     li {
         display: inline-block;
-        width: 24%;
+        width: 100%;
         text-align: center;
         transition: 0.5s all ease-in-out;
+
+        @include breakpoint($tablet-mid) {
+            width: 24%;
+        }
 
         &:hover {
             background: #E7E7E8;
@@ -37,4 +41,19 @@
 .faces-set {
     margin-top: 0;
     border: none;
+}
+
+#lensInfo {
+
+    aside {
+        display: inline-block;
+
+        @include breakpoint($tablet-mid) {
+            width: 33%;
+        }
+    }
+
+    h5 {
+        text-align: center;
+    }
 }

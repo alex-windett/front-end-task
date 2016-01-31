@@ -1263,9 +1263,12 @@ h1, h2 {
     padding-left: 0; }
   .accordion-nav li {
     display: inline-block;
-    width: 24%;
+    width: 100%;
     text-align: center;
     transition: 0.5s all ease-in-out; }
+    @media screen and (min-width: 55.5em) {
+      .accordion-nav li {
+        width: 24%; } }
     .accordion-nav li:hover {
       background: #E7E7E8;
       transition: 0.5s all ease-in-out; }
@@ -1278,5 +1281,14 @@ h1, h2 {
 .faces-set {
   margin-top: 0;
   border: none; }
+
+#lensInfo aside {
+  display: inline-block; }
+  @media screen and (min-width: 55.5em) {
+    #lensInfo aside {
+      width: 33%; } }
+
+#lensInfo h5 {
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

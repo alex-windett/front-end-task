@@ -72,13 +72,13 @@ var productAccordion = {
                 $(this).removeClass('active');
                 $('.accordion-item' + clickedItemContent)
                     .removeClass('active')
-                    .hide();
+                    ;
             } else {
                 $(this)
                     .addClass('active')
                 $('.accordion-item' + clickedItemContent)
-                    .addClass('active').show()
-                    .siblings().removeClass('active').hide();
+                    .addClass('active')
+                    .siblings().removeClass('active');
             }
         });
     }
