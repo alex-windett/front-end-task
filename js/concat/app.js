@@ -8,7 +8,7 @@ var sectionThird = sectionWidth / 3;
 
 var firstThirdBoundary 	= sectionThird
 var lastThirdBoundary 	= sectionWidth - sectionThird;
-console.log('face width ' + firstThirdBoundary)
+console.log('face width ' + firstThirdBoundary); 
 
 // Start off with the face on image by hiding the first two
 var defaultimages = {
@@ -54,6 +54,25 @@ var defaultimages = {
     }
 }
 
+var productAccordion = {
+
+    init: function() {
+        $('.accordion-item').hide();
+        $('.accrodion-item').first().show();
+    },
+
+    clicked: function() {
+        $('.accordion-nav a').click(function(event){
+            event.preventDefault();
+
+            var clickedItem = $(this).attr('href');
+
+            $(this).toggleClass('active');
+            clickedItem.slideToggle().addClass('active');
+        });
+    }
+}
+
 jQuery(document).ready(function($){
 	console.log('ready');
 
@@ -63,13 +82,7 @@ jQuery(document).ready(function($){
 	defaultimages.init();
 	defaultimages.rollOver();
 
-	$('.accordion-nav a').click(function(event){
-		event.preventDefault();
-
-		var clickedItem = $(this).attr('href');
-
-		$(this).toggleClass('active');
-		$(clickedItem).slideToggle().addClass('active');
-	})
+	productAccordion.init();
+	productAccordion.clicked();
 
 });

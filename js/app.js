@@ -7,13 +7,7 @@ jQuery(document).ready(function($){
 	defaultimages.init();
 	defaultimages.rollOver();
 
-	$('.accordion-nav a').click(function(event){
-		event.preventDefault();
-
-		var clickedItem = $(this).attr('href');
-
-		$(this).toggleClass('active');
-		$(clickedItem).slideToggle().addClass('active');
-	})
+	productAccordion.init();
+	productAccordion.clicked();
 
 });

@@ -8,7 +8,7 @@ var sectionThird = sectionWidth / 3;
 
 var firstThirdBoundary 	= sectionThird
 var lastThirdBoundary 	= sectionWidth - sectionThird;
-console.log('face width ' + firstThirdBoundary)
+console.log('face width ' + firstThirdBoundary); 
 
 // Start off with the face on image by hiding the first two
 var defaultimages = {

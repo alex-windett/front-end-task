@@ -27,12 +27,12 @@ module.exports = function(grunt) {
 
         concat: {
             app: {
-              files: {
-                'js/concat/app.js': [
-                    'js/functions/*.js',
-					'js/app.js'
-				]
-              },
+                files: {
+                    'js/concat/app.js': [
+                        'js/functions/*.js',
+    					'js/app.js'
+    				]
+                },
             }
         },
 
@@ -44,15 +44,15 @@ module.exports = function(grunt) {
             js: {
     			files: [
                     'js/app.js',
-                    'js/fucntions/*.js'
+                    'js/functions/*.js'
                 ],
-    			tasks: ['concat']
+                tasks: ['concat']
     		},
             livereload: {
                 options: {
                     livereload: 35740
                 },
-                files: ['*.html', 'js/app.js', 'css/sas/**/*.scss','img/**/*.{png,jpg,jpeg,gif,webp,svg}']
+                files: ['*.html', 'js/**/*.js', 'css/sas/**/*.scss','img/**/*.{png,jpg,jpeg,gif,webp,svg}']
             },
         }
     });
