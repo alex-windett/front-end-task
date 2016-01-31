@@ -1,15 +1,17 @@
 module.exports = function(grunt) {
 
-    // 1. All configuration goes here 
+    // 1. All configuration goes here
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
         sass_directory_import: {
-            your_target: { 
+            your_target: {
                 files: {
                     src: ['css/sass/parts/_all.scss']
                 },
             },
         },
+
         sass: {
             dist: {
                 options: {
@@ -22,14 +24,36 @@ module.exports = function(grunt) {
                 }
             },
         },
+
+        concat: {
+            app: {
+              files: {
+                'js/concat/app.js': [
+                    'js/functions/*.js',
+					'js/app.js'
+				]
+              },
+            }
+        },
+
         watch: {
             sass: {
                 files: 'css/sass/**/*.scss',
                 tasks: ['sass_directory_import','sass']
             },
-            options: {
-                livereload: true
-            }
+            js: {
+    			files: [
+                    'js/app.js',
+                    'js/fucntions/*.js'
+                ],
+    			tasks: ['concat']
+    		},
+            livereload: {
+                options: {
+                    livereload: 35740
+                },
+                files: ['*.html', 'js/app.js', 'css/sas/**/*.scss','img/**/*.{png,jpg,jpeg,gif,webp,svg}']
+            },
         }
     });
 
@@ -43,6 +67,6 @@ module.exports = function(grunt) {
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default',['watch']);
-    grunt.registerTask('build',['sass', 'uglify']);
+    grunt.registerTask('build',['sass', 'concat']);
 
 };

@@ -6,3 +6,27 @@
         margin-right: 0em;
     }
 }
+
+.accordion-nav {
+    clear: both;
+    ul {
+        padding-left: 0;
+    }
+
+    li {
+        display: inline-block;
+        width: 24%;
+        text-align: center;
+        transition: 0.5s all ease-in-out;
+        
+        &:hover {
+            background: #E7E7E8;
+            transition: 0.5s all ease-in-out;
+        }
+    }
+}
+
+.faces {
+    margin-top: 0;
+    border: none;
+}

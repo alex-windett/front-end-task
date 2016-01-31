@@ -1257,4 +1257,21 @@ h1, h2 {
   padding-bottom: 0.6em;
   margin-right: 0em; }
 
+.accordion-nav {
+  clear: both; }
+  .accordion-nav ul {
+    padding-left: 0; }
+  .accordion-nav li {
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    transition: 0.5s all ease-in-out; }
+    .accordion-nav li:hover {
+      background: #E7E7E8;
+      transition: 0.5s all ease-in-out; }
+
+.faces {
+  margin-top: 0;
+  border: none; }
+
 /*# sourceMappingURL=style.css.map */
