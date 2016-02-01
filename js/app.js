@@ -15,16 +15,14 @@ jQuery(document).ready(function($){
 		// navigationText: ["<",">"],
 		slideSpeed : 300,
 		paginationSpeed : 400,
+		autoplay: true,
+		autoplayTimeout: 4000,
+		autoplayHoverPause: true,
 		singleItem:true,
 		responsive: true,
 		responsiveRefreshRate: 1
 	});
 
-	$('#highlightsCarousel').owlCarousel({
-		navigation : true, // Show next and prev buttons
-		// navigationText: ["<",">"],
-		slideSpeed : 300,
-		paginationSpeed : 400,
-		singleItem:true
-	});
+	styles.init();
+
 });

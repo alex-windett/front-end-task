@@ -50,6 +50,27 @@
     }
 }
 
+#productDetails {
+
+     p:last-of-type {
+         margin-bottom: 2em;
+     }
+}
+
+#lensInfo {
+
+    aside {
+        vertical-align: top;
+    }
+
+    ul {
+
+        @include breakpoint($tablet-mid) {
+            min-height: 13em;
+        }
+    }
+}
+
 .accordion {
     clear: both;
     list-style-type: none;
@@ -60,6 +81,15 @@
 
     &__content {
         display: none;
+
+        ul {
+            padding-left: 2em;
+
+            @include breakpoint($tablet-mid) {
+                padding-left: 4em;
+                min-height: 19em;
+            }
+        }
 
         &.active {
             display: block;

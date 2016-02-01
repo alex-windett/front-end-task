@@ -54,6 +54,23 @@ var defaultimages = {
     }
 }
 
+// Find how many sunglass styles are being displayed
+var glassStyles = $('.styles figure'),
+    stylesCount = glassStyles.size();
+
+var styles = {
+
+    init: function() {
+        // if there are odd number then add class 'center'
+        // to first element to enlarge and center element
+        if ( stylesCount % 2 == 0 ) {
+            glassStyles.first().addClass('left');
+        } else {
+            glassStyles.first().addClass('center');
+        }
+    }
+}
+
 var productAccordion = {
 
     init: function() {
@@ -93,16 +110,14 @@ jQuery(document).ready(function($){
 		// navigationText: ["<",">"],
 		slideSpeed : 300,
 		paginationSpeed : 400,
+		autoplay: true,
+		autoplayTimeout: 4000,
+		autoplayHoverPause: true,
 		singleItem:true,
 		responsive: true,
 		responsiveRefreshRate: 1
 	});
 
-	$('#highlightsCarousel').owlCarousel({
-		navigation : true, // Show next and prev buttons
-		// navigationText: ["<",">"],
-		slideSpeed : 300,
-		paginationSpeed : 400,
-		singleItem:true
-	});
+	styles.init();
+
 });
