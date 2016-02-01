@@ -93,7 +93,9 @@ jQuery(document).ready(function($){
 		// navigationText: ["<",">"],
 		slideSpeed : 300,
 		paginationSpeed : 400,
-		singleItem:true
+		singleItem:true,
+		responsive: true,
+		responsiveRefreshRate: 1
 	});
 
 	$('#highlightsCarousel').owlCarousel({
