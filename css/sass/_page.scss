@@ -84,11 +84,6 @@
 
         ul {
             padding-left: 2em;
-
-            @include breakpoint($tablet-mid) {
-                padding-left: 4em;
-                min-height: 19em;
-            }
         }
 
         &.active {
@@ -107,7 +102,18 @@
             width: 25px;
             height: 14px;
             left: -36px;
-            bottom: -18px;
+            bottom: -33px;
+        }
+
+        h4 {
+            margin: 0;
+            padding: 1em 0 1em 1em;
+            transition: 0.5s all ease-in-out;
+
+            &:hover {
+                background: #E6E3E3;
+                transition: 0.5s all ease-in-out;
+            }
         }
 
         &.active {
@@ -121,7 +127,7 @@
                 width: 25px;
                 height: 14px;
                 left: -36px;
-                bottom: 3px;
+                bottom: 20px;
             }
         }
     }
@@ -144,5 +150,11 @@
 
     h5 {
         text-align: center;
+    }
+
+    ul {
+        @include breakpoint($tablet-mid) {
+            min-height: 13em;
+        }
     }
 }
