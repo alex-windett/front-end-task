@@ -30,7 +30,11 @@
     }
 }
 
-.accordion-item {
+.accordion {
+    clear: both;
+}
+
+.accordion-content {
     display: none;
 
     &.active {

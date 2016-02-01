@@ -62,25 +62,17 @@ var productAccordion = {
     },
 
     clicked: function() {
-        $('.accordion-nav a').click(function(event){
-            event.preventDefault();
-
-            var clickedItemContent = $(this).attr('href');
-            // console.log('accordion-item'clickedItemContent);
+        $('.accordion-trigger').click(function(e){
+            e.preventDefault();
 
             if ( $(this).hasClass('active') ) {
                 $(this).removeClass('active');
-                $('.accordion-item' + clickedItemContent)
-                    .removeClass('active')
-                    ;
+                $(this).siblings('div').removeClass('active').hide();
             } else {
-                $(this)
-                    .addClass('active')
-                $('.accordion-item' + clickedItemContent)
-                    .addClass('active')
-                    .siblings().removeClass('active');
+                $(this).addClass('active');
+                $(this).siblings('div').addClass('active').show();
             }
-        });
+        })
     }
 }
 
