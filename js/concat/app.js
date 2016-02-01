@@ -79,6 +79,9 @@ var productAccordion = {
     },
 
     clicked: function() {
+        $('.accordion__content').hide();
+        $('.accordion__content.active').show()
+        // Create a simple accordion
         $('.accordion__trigger').click(function(e){
             e.preventDefault();
 
@@ -89,7 +92,25 @@ var productAccordion = {
                 $(this).addClass('active');
                 $(this).siblings('div').addClass('active').show();
             }
-        })
+        });
+    }
+}
+
+var sliders = {
+
+    owlCarousel: function() {
+        $('#featuredCarousel').owlCarousel({
+            navigation : false, // Show next and prev buttons
+            // navigationText: ["<",">"],
+            slideSpeed : 300,
+            paginationSpeed : 400,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            singleItem:true,
+            responsive: true,
+            responsiveRefreshRate: 1
+        });
     }
 }
 
@@ -105,19 +126,8 @@ jQuery(document).ready(function($){
 	productAccordion.init();
 	productAccordion.clicked();
 
-	$('#featuredCarousel').owlCarousel({
-		navigation : false, // Show next and prev buttons
-		// navigationText: ["<",">"],
-		slideSpeed : 300,
-		paginationSpeed : 400,
-		autoplay: true,
-		autoplayTimeout: 4000,
-		autoplayHoverPause: true,
-		singleItem:true,
-		responsive: true,
-		responsiveRefreshRate: 1
-	});
-
 	styles.init();
+
+	sliders.owlCarousel();
 
 });

@@ -6,6 +6,9 @@ var productAccordion = {
     },
 
     clicked: function() {
+        $('.accordion__content').hide();
+        $('.accordion__content.active').show()
+        // Create a simple accordion
         $('.accordion__trigger').click(function(e){
             e.preventDefault();
 
@@ -16,6 +19,6 @@ var productAccordion = {
                 $(this).addClass('active');
                 $(this).siblings('div').addClass('active').show();
             }
-        })
+        });
     }
 }

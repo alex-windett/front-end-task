@@ -1302,12 +1302,8 @@ h1, h2 {
   list-style-type: none; }
   .accordion > li {
     clear: both; }
-  .accordion__content {
-    display: none; }
-    .accordion__content ul {
-      padding-left: 2em; }
-    .accordion__content.active {
-      display: block; }
+  .accordion__content ul {
+    padding-left: 2em; }
   .accordion__trigger {
     position: relative; }
     .accordion__trigger:before {
