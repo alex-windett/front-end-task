@@ -10,4 +10,19 @@ jQuery(document).ready(function($){
 	productAccordion.init();
 	productAccordion.clicked();
 
+	$('#featuredCarousel').owlCarousel({
+		navigation : false, // Show next and prev buttons
+		// navigationText: ["<",">"],
+		slideSpeed : 300,
+		paginationSpeed : 400,
+		singleItem:true
+	});
+
+	$('#highlightsCarousel').owlCarousel({
+		navigation : true, // Show next and prev buttons
+		// navigationText: ["<",">"],
+		slideSpeed : 300,
+		paginationSpeed : 400,
+		singleItem:true
+	});
 });

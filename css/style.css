@@ -1257,6 +1257,20 @@ h1, h2 {
   padding-bottom: 0.6em;
   margin-right: 0em; }
 
+.owl-prev,
+.owl-next {
+  background: none !important;
+  color: black !important;
+  font-size: 43px !important;
+  position: absolute;
+  top: 45%; }
+
+.owl-prev {
+  left: 0; }
+
+.owl-next {
+  right: 0; }
+
 .button {
   border-radius: 0.4em;
   padding: 0.5em;

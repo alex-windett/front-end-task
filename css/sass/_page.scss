@@ -7,6 +7,24 @@
     }
 }
 
+.owl-prev,
+.owl-next {
+    // important used to override plugins high specificity
+    background: none !important;
+    color: black !important;
+    font-size: 43px !important;
+    position: absolute;
+    top: 45%;
+}
+
+.owl-prev {
+    left: 0;
+}
+
+.owl-next {
+    right: 0;
+}
+
 .button {
     border-radius: 0.4em;
     padding: 0.5em;

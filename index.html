@@ -5,6 +5,9 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
@@ -34,14 +37,28 @@
 			</header>
 			<section role="main" class="container cf">
 				<!-- Lay this out however you like, there are a lot more photos to use in img/ -->
-				<figure class="row">
-					<img src="img/sunglasses-angle-large.jpg"/>
-				</figure>
-
-				<section class="row">
-					<figure class="partition half">
+				<div class="owl-carousel" id="featuredCarousel">
+					<figure class="row">
+						<img src="img/shoot-Franc/15-03-10-Franc-Strazzeri-Rapha-City-Survey-Shoot-11.jpg"/>
+					</figure>
+					<figure class="row">
+						<img src="img/shoot-Lars/L1004438.jpg"/>
+					</figure>
+					<figure class="row">
 						<img src="img/sunglasses-angle-large.jpg"/>
 					</figure>
+					<figure class="row">
+						<img src="img/sunglasses-angle-large.jpg"/>
+					</figure>
+				</div>
+
+				<section class="row">
+					<div class=" partition half" id="highlightsCarouse">
+						<figure class="wrapper">
+							<img src="img/sunglasses-angle-large.jpg"/>
+						</figure>
+					</div>
+
 
 					<div class="partition half product-header">
 						<h1>The Rapha Classic Sunglasses</h1>
@@ -186,6 +203,7 @@
 		<!-- Scripts -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script type="text/javascript" src="http://localhost:35729/livereload.js?snipver=1"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 		<script type="text/javascript" src="js/concat/app.js"></script>
 
 
