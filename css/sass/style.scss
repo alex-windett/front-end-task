@@ -41,6 +41,10 @@ $rccbluegrey : #7A878D;
 $rcclightgrey : #D4D5CF;
 $rcchighvispink : #E7466F;
 
+// Variables
+$image-path: '../img/';
+$image-decoration: $image-path + 'decoration/';
+
 // www.fonts.com/web-fonts/projects self hosted Rapha v.3 Family Grouping
 @font-face{
 font-family:"Adobe Caslon W01_i4";
@@ -156,4 +160,4 @@ font-style: normal;
 }
 
 @import 'parts/_all';
-@import 'page';  
+@import 'page';

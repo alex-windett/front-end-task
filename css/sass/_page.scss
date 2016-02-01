@@ -7,38 +7,75 @@
     }
 }
 
-.accordion-nav {
-    clear: both;
-    ul {
-        padding-left: 0;
+.button {
+    border-radius: 0.4em;
+    padding: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Trade Gothic W01";
+    transition: 0.5s all ease-in-out;
+
+    &:hover {
+        transition: 0.5s all ease-in-out;
     }
 
-    li {
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-        transition: 0.5s all ease-in-out;
+    &__buy {
+        background: $pink;
 
-        @include breakpoint($tablet-mid) {
-            width: 24%;
+        > a {
+            color: $white;
         }
 
         &:hover {
-            background: #E7E7E8;
-            transition: 0.5s all ease-in-out;
+            background: lighten($pink, 10%);
         }
     }
 }
 
 .accordion {
     clear: both;
-}
+    list-style-type: none;
 
-.accordion-content {
-    display: none;
+    > li {
+        clear: both;
+    }
 
-    &.active {
-        display: block;
+    &__content {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__trigger {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            background: url($image-decoration + 'accordion-open.png');
+            width: 25px;
+            height: 14px;
+            left: -36px;
+            bottom: -18px;
+        }
+
+        &.active {
+            display: block;
+
+            &:before {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                background: url($image-decoration + 'accordion-closed.png');
+                width: 25px;
+                height: 14px;
+                left: -36px;
+                bottom: 3px;
+            }
+        }
     }
 }
 

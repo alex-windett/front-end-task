@@ -6,7 +6,7 @@ var productAccordion = {
     },
 
     clicked: function() {
-        $('.accordion-trigger').click(function(e){
+        $('.accordion__trigger').click(function(e){
             e.preventDefault();
 
             if ( $(this).hasClass('active') ) {

@@ -1257,29 +1257,53 @@ h1, h2 {
   padding-bottom: 0.6em;
   margin-right: 0em; }
 
-.accordion-nav {
-  clear: both; }
-  .accordion-nav ul {
-    padding-left: 0; }
-  .accordion-nav li {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
+.button {
+  border-radius: 0.4em;
+  padding: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Trade Gothic W01";
+  transition: 0.5s all ease-in-out; }
+  .button:hover {
     transition: 0.5s all ease-in-out; }
-    @media screen and (min-width: 55.5em) {
-      .accordion-nav li {
-        width: 24%; } }
-    .accordion-nav li:hover {
-      background: #E7E7E8;
-      transition: 0.5s all ease-in-out; }
+  .button__buy {
+    background: #F27490; }
+    .button__buy > a {
+      color: #fff; }
+    .button__buy:hover {
+      background: #f6a3b5; }
 
 .accordion {
-  clear: both; }
-
-.accordion-content {
-  display: none; }
-  .accordion-content.active {
-    display: block; }
+  clear: both;
+  list-style-type: none; }
+  .accordion > li {
+    clear: both; }
+  .accordion__content {
+    display: none; }
+    .accordion__content.active {
+      display: block; }
+  .accordion__trigger {
+    position: relative; }
+    .accordion__trigger:before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      background: url("../img/decoration/accordion-open.png");
+      width: 25px;
+      height: 14px;
+      left: -36px;
+      bottom: -18px; }
+    .accordion__trigger.active {
+      display: block; }
+      .accordion__trigger.active:before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        background: url("../img/decoration/accordion-closed.png");
+        width: 25px;
+        height: 14px;
+        left: -36px;
+        bottom: 3px; }
 
 .faces-set {
   margin-top: 0;
