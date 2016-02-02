@@ -8,39 +8,9 @@
     }
 }
 
-.flex-container {
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
-}
-
-.flex-item {
-	-webkit-flex: 1 0 auto;
-	flex: 1 0 auto;
-}
-
-.owl-prev,
-.owl-next {
-    // important used to override plugins high specificity
-    background: none !important;
-    color: black !important;
-    font-size: 43px !important;
-    position: absolute;
-    top: 45%;
-}
-
-.owl-prev {
-    left: 0;
-}
-
-.owl-next {
-    right: 0;
-}
-
 .button {
     border-radius: 0.4em;
-    padding: 0.5em;
+    padding: 0.3em 0em;
     text-align: center;
     text-transform: uppercase;
     font-family: "Trade Gothic W01";
@@ -63,44 +33,44 @@
     }
 }
 
-#productDetails {
-
-     p:last-of-type {
-         margin-bottom: 2em;
-     }
+// ****************************************
+// Carousel Styling
+// ****************************************
+.owl-prev,
+.owl-next {
+    // important used to override plugins high specificity
+    background: none !important;
+    color: black !important;
+    font-size: 43px !important;
+    position: absolute;
+    top: 45%;
 }
 
-#lensInfo {
-
-    aside {
-        vertical-align: top;
-    }
-
-    ul {
-
-        @include breakpoint($tablet-mid) {
-            min-height: 13em;
-        }
-    }
+.owl-prev {
+    left: 0;
 }
 
+.owl-next {
+    right: 0;
+}
+
+
+// ****************************************
+// Accordion Styles
+// ****************************************
 .accordion {
     clear: both;
     list-style-type: none;
+    padding-left: 0;
 
     > li {
         clear: both;
     }
 
     &__content {
-        // display: none;
 
         ul {
             padding-left: 2em;
-        }
-
-        &.active {
-            // display: block;
         }
     }
 
@@ -111,21 +81,24 @@
             content: "";
             position: absolute;
             display: inline-block;
-            background: url($image-decoration + 'accordion-open.png');
+            background: url($image-decoration + 'accordion-open-black.png');
             width: 25px;
             height: 14px;
-            left: -36px;
+            left: 13px;
             bottom: -33px;
+            z-index: 1;
         }
 
         h4 {
             margin: 0;
-            padding: 1em 0 1em 1em;
+            padding: 1em 0 1em 3em;
+            margin-bottom: 0.5em;
+            background: $lightgrey;
             transition: 0.5s all ease-in-out;
             font-family: "Trade Gothic W01";
 
             &:hover {
-                background: #E6E3E3;
+                background: darken($lightgrey, 10%);
                 transition: 0.5s all ease-in-out;
             }
         }
@@ -137,14 +110,25 @@
                 content: "";
                 position: absolute;
                 display: inline-block;
-                background: url($image-decoration + 'accordion-closed.png');
+                background: url($image-decoration + 'accordion-closed-black.png');
                 width: 25px;
                 height: 14px;
-                left: -36px;
+                left: 13px;
                 bottom: 20px;
+                z-index: 1;
             }
         }
     }
+}
+
+// ****************************************
+// Accordion Content Styles
+// ****************************************
+.product-details {
+
+     p:last-of-type {
+         margin-bottom: 2em;
+     }
 }
 
 .faces-set {
@@ -152,10 +136,11 @@
     border: none;
 }
 
-#lensInfo {
+.lens-info {
 
     aside {
         display: inline-block;
+        vertical-align: top;
 
         @include breakpoint($tablet-mid) {
             width: 33%;

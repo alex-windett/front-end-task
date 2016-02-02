@@ -1258,15 +1258,21 @@ h1, h2 {
   margin-right: 0em;
   line-height: 42px; }
 
-.flex-container {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap; }
-
-.flex-item {
-  -webkit-flex: 1 0 auto;
-  flex: 1 0 auto; }
+.button {
+  border-radius: 0.4em;
+  padding: 0.3em 0em;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Trade Gothic W01";
+  transition: 0.5s all ease-in-out; }
+  .button:hover {
+    transition: 0.5s all ease-in-out; }
+  .button__buy {
+    background: #F27490; }
+    .button__buy > a {
+      color: #fff; }
+    .button__buy:hover {
+      background: #f6a3b5; }
 
 .owl-prev,
 .owl-next {
@@ -1282,35 +1288,10 @@ h1, h2 {
 .owl-next {
   right: 0; }
 
-.button {
-  border-radius: 0.4em;
-  padding: 0.5em;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Trade Gothic W01";
-  transition: 0.5s all ease-in-out; }
-  .button:hover {
-    transition: 0.5s all ease-in-out; }
-  .button__buy {
-    background: #F27490; }
-    .button__buy > a {
-      color: #fff; }
-    .button__buy:hover {
-      background: #f6a3b5; }
-
-#productDetails p:last-of-type {
-  margin-bottom: 2em; }
-
-#lensInfo aside {
-  vertical-align: top; }
-
-@media screen and (min-width: 55.5em) {
-  #lensInfo ul {
-    min-height: 13em; } }
-
 .accordion {
   clear: both;
-  list-style-type: none; }
+  list-style-type: none;
+  padding-left: 0; }
   .accordion > li {
     clear: both; }
   .accordion__content ul {
@@ -1321,18 +1302,21 @@ h1, h2 {
       content: "";
       position: absolute;
       display: inline-block;
-      background: url("../img/decoration/accordion-open.png");
+      background: url("../img/decoration/accordion-open-black.png");
       width: 25px;
       height: 14px;
-      left: -36px;
-      bottom: -33px; }
+      left: 13px;
+      bottom: -33px;
+      z-index: 1; }
     .accordion__trigger h4 {
       margin: 0;
-      padding: 1em 0 1em 1em;
+      padding: 1em 0 1em 3em;
+      margin-bottom: 0.5em;
+      background: #E7E7E8;
       transition: 0.5s all ease-in-out;
       font-family: "Trade Gothic W01"; }
       .accordion__trigger h4:hover {
-        background: #E6E3E3;
+        background: #cdcdcf;
         transition: 0.5s all ease-in-out; }
     .accordion__trigger.active {
       display: block; }
@@ -1340,27 +1324,32 @@ h1, h2 {
         content: "";
         position: absolute;
         display: inline-block;
-        background: url("../img/decoration/accordion-closed.png");
+        background: url("../img/decoration/accordion-closed-black.png");
         width: 25px;
         height: 14px;
-        left: -36px;
-        bottom: 20px; }
+        left: 13px;
+        bottom: 20px;
+        z-index: 1; }
+
+.product-details p:last-of-type {
+  margin-bottom: 2em; }
 
 .faces-set {
   margin-top: 0;
   border: none; }
 
-#lensInfo aside {
-  display: inline-block; }
+.lens-info aside {
+  display: inline-block;
+  vertical-align: top; }
   @media screen and (min-width: 55.5em) {
-    #lensInfo aside {
+    .lens-info aside {
       width: 33%; } }
 
-#lensInfo h5 {
+.lens-info h5 {
   text-align: center; }
 
 @media screen and (min-width: 55.5em) {
-  #lensInfo ul {
+  .lens-info ul {
     min-height: 13em; } }
 
 /*# sourceMappingURL=style.css.map */
