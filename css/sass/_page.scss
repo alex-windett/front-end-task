@@ -1,3 +1,4 @@
+$font-header: "Trade Gothic W01";
 $font-brand: "Adobe Caslon W01";
 
 p {
@@ -10,28 +11,32 @@ p.lead {
     line-height: 38px;
 }
 
+.decorated-header {
+    border-bottom: 1px solid black;
+    padding-bottom: 0.6em;
+    margin-right: 0em;
+    line-height: 42px;
+}
+
 .product {
-
-    &__header {
-
-        h1 {
-            border-bottom: 1px solid black;
-            padding-bottom: 0.6em;
-            margin-right: 0em;
-            line-height: 42px;
-        }
-    }
-
+    // importants used to override specificity of base Rapha styles
     &__details {
         margin-top: 0 !important;
 
         @include breakpoint($tablet-mid) {
             margin-top: 1.5em !important;
         }
+    }
 
-         p:last-of-type {
-             margin-bottom: 2em;
-         }
+    &__specs {
+        margin-top: 0 !important;
+        .half {
+            width: 50%;
+        }
+    }
+
+    &__padder {
+        display: inline-block;
     }
 }
 
@@ -41,7 +46,7 @@ p.lead {
     margin: 1em 0 1.5em;
     text-align: center;
     text-transform: uppercase;
-    font-family: "Trade Gothic W01";
+    font-family: $font-header;
     letter-spacing: 2px;
     transition: 0.5s all ease-in-out;
 
@@ -129,7 +134,7 @@ p.lead {
             padding: 1em 0 1em 3em;
             margin-bottom: 0.5em;
             background: $lightgrey;
-            font-family: "Trade Gothic W01";
+            font-family: $font-header;
             color: $black;
             transition: 0.5s all ease-in-out;
 
@@ -161,8 +166,15 @@ p.lead {
 // Accordion Content Styles
 // ****************************************
 .faces-set {
-    margin-top: 0;
     border: none;
+    margin: 0 !important; // Overriding Rapha base style
+
+    h5 {
+        text-align: center;
+        font-family: $font-header;
+        font-size: 21px;
+        line-height: 24px;
+    }
 }
 
 .lens-info {
@@ -172,7 +184,7 @@ p.lead {
         vertical-align: top;
 
         @include breakpoint($tablet-mid) {
-            width: 49%;
+            width: 33%;
         }
     }
 

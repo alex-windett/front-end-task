@@ -1260,7 +1260,7 @@ p.lead {
   font-size: 32px;
   line-height: 38px; }
 
-.product__header h1 {
+.decorated-header {
   border-bottom: 1px solid black;
   padding-bottom: 0.6em;
   margin-right: 0em;
@@ -1271,8 +1271,14 @@ p.lead {
   @media screen and (min-width: 55.5em) {
     .product__details {
       margin-top: 1.5em !important; } }
-  .product__details p:last-of-type {
-    margin-bottom: 2em; }
+
+.product__specs {
+  margin-top: 0 !important; }
+  .product__specs .half {
+    width: 50%; }
+
+.product__padder {
+  display: inline-block; }
 
 .button {
   border-radius: 0.4em;
@@ -1355,15 +1361,20 @@ p.lead {
         z-index: 1; }
 
 .faces-set {
-  margin-top: 0;
-  border: none; }
+  border: none;
+  margin: 0 !important; }
+  .faces-set h5 {
+    text-align: center;
+    font-family: "Trade Gothic W01";
+    font-size: 21px;
+    line-height: 24px; }
 
 .lens-info aside {
   display: inline-block;
   vertical-align: top; }
   @media screen and (min-width: 55.5em) {
     .lens-info aside {
-      width: 49%; } }
+      width: 33%; } }
 
 .lens-info h5 {
   text-align: center;
