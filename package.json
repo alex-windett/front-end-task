@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/rapharacing/rapha-wordpress-theme/issues"
   },
-  "homepage": "https://github.com/rapharacing/rapha-wordpress-theme"
+  "homepage": "https://github.com/rapharacing/rapha-wordpress-theme",
+  "dependencies": {
+    "grunt-contrib-imagemin": "^1.0.0"
+  }
 }

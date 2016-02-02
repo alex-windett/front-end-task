@@ -38,3 +38,4 @@ node_modules
 css/**/*.css
 css/**/*.css.map
 js/concat/
+img/min/**/*

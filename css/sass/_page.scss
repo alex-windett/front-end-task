@@ -1,19 +1,48 @@
-.product-header {
+$font-brand: "Adobe Caslon W01";
 
-    h1 {
-        border-bottom: 1px solid black;
-        padding-bottom: 0.6em;
-        margin-right: 0em;
-        line-height: 42px;
+p {
+    font-size: 18px;
+    line-height: 27px;
+}
+
+p.lead {
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.product {
+
+    &__header {
+
+        h1 {
+            border-bottom: 1px solid black;
+            padding-bottom: 0.6em;
+            margin-right: 0em;
+            line-height: 42px;
+        }
+    }
+
+    &__details {
+        margin-top: 0 !important;
+
+        @include breakpoint($tablet-mid) {
+            margin-top: 1.5em !important;
+        }
+
+         p:last-of-type {
+             margin-bottom: 2em;
+         }
     }
 }
 
 .button {
     border-radius: 0.4em;
     padding: 0.3em 0em;
+    margin: 1em 0 1.5em;
     text-align: center;
     text-transform: uppercase;
     font-family: "Trade Gothic W01";
+    letter-spacing: 2px;
     transition: 0.5s all ease-in-out;
 
     &:hover {
@@ -22,9 +51,11 @@
 
     &__buy {
         background: $pink;
+        padding: 0.6em 0;
 
-        > a {
+        > p {
             color: $white;
+            padding-bottom: 0.5em;
         }
 
         &:hover {
@@ -72,6 +103,10 @@
         ul {
             padding-left: 2em;
         }
+
+        h5 {
+            font-family: $font-brand;
+        }
     }
 
     &__trigger {
@@ -94,8 +129,9 @@
             padding: 1em 0 1em 3em;
             margin-bottom: 0.5em;
             background: $lightgrey;
-            transition: 0.5s all ease-in-out;
             font-family: "Trade Gothic W01";
+            color: $black;
+            transition: 0.5s all ease-in-out;
 
             &:hover {
                 background: darken($lightgrey, 10%);
@@ -124,13 +160,6 @@
 // ****************************************
 // Accordion Content Styles
 // ****************************************
-.product-details {
-
-     p:last-of-type {
-         margin-bottom: 2em;
-     }
-}
-
 .faces-set {
     margin-top: 0;
     border: none;
@@ -143,17 +172,20 @@
         vertical-align: top;
 
         @include breakpoint($tablet-mid) {
-            width: 33%;
+            width: 49%;
         }
     }
 
     h5 {
         text-align: center;
+        font-family: $font-brand;
+        font-size: 21px;
+        line-height: 24px;
     }
 
     ul {
         @include breakpoint($tablet-mid) {
-            min-height: 13em;
+            min-height: 14em;
         }
     }
 }

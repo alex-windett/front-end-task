@@ -1252,25 +1252,45 @@ h1, h2 {
     top: -.8125em;
     position: relative; }
 
-.product-header h1 {
+p {
+  font-size: 18px;
+  line-height: 27px; }
+
+p.lead {
+  font-size: 32px;
+  line-height: 38px; }
+
+.product__header h1 {
   border-bottom: 1px solid black;
   padding-bottom: 0.6em;
   margin-right: 0em;
   line-height: 42px; }
 
+.product__details {
+  margin-top: 0 !important; }
+  @media screen and (min-width: 55.5em) {
+    .product__details {
+      margin-top: 1.5em !important; } }
+  .product__details p:last-of-type {
+    margin-bottom: 2em; }
+
 .button {
   border-radius: 0.4em;
   padding: 0.3em 0em;
+  margin: 1em 0 1.5em;
   text-align: center;
   text-transform: uppercase;
   font-family: "Trade Gothic W01";
+  letter-spacing: 2px;
   transition: 0.5s all ease-in-out; }
   .button:hover {
     transition: 0.5s all ease-in-out; }
   .button__buy {
-    background: #F27490; }
-    .button__buy > a {
-      color: #fff; }
+    background: #F27490;
+    padding: 0.6em 0; }
+    .button__buy > p {
+      color: #fff;
+      padding-bottom: 0.5em; }
     .button__buy:hover {
       background: #f6a3b5; }
 
@@ -1296,13 +1316,15 @@ h1, h2 {
     clear: both; }
   .accordion__content ul {
     padding-left: 2em; }
+  .accordion__content h5 {
+    font-family: "Adobe Caslon W01"; }
   .accordion__trigger {
     position: relative; }
     .accordion__trigger:before {
       content: "";
       position: absolute;
       display: inline-block;
-      background: url("../img/decoration/accordion-open-black.png");
+      background: url("../img/min/decoration/accordion-open-black.png");
       width: 25px;
       height: 14px;
       left: 13px;
@@ -1313,8 +1335,9 @@ h1, h2 {
       padding: 1em 0 1em 3em;
       margin-bottom: 0.5em;
       background: #E7E7E8;
-      transition: 0.5s all ease-in-out;
-      font-family: "Trade Gothic W01"; }
+      font-family: "Trade Gothic W01";
+      color: #191919;
+      transition: 0.5s all ease-in-out; }
       .accordion__trigger h4:hover {
         background: #cdcdcf;
         transition: 0.5s all ease-in-out; }
@@ -1324,15 +1347,12 @@ h1, h2 {
         content: "";
         position: absolute;
         display: inline-block;
-        background: url("../img/decoration/accordion-closed-black.png");
+        background: url("../img/min/decoration/accordion-closed-black.png");
         width: 25px;
         height: 14px;
         left: 13px;
         bottom: 20px;
         z-index: 1; }
-
-.product-details p:last-of-type {
-  margin-bottom: 2em; }
 
 .faces-set {
   margin-top: 0;
@@ -1343,13 +1363,16 @@ h1, h2 {
   vertical-align: top; }
   @media screen and (min-width: 55.5em) {
     .lens-info aside {
-      width: 33%; } }
+      width: 49%; } }
 
 .lens-info h5 {
-  text-align: center; }
+  text-align: center;
+  font-family: "Adobe Caslon W01";
+  font-size: 21px;
+  line-height: 24px; }
 
 @media screen and (min-width: 55.5em) {
   .lens-info ul {
-    min-height: 13em; } }
+    min-height: 14em; } }
 
 /*# sourceMappingURL=style.css.map */

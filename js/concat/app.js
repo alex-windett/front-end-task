@@ -87,10 +87,10 @@ var productAccordion = {
 
             if ( $(this).hasClass('active') ) {
                 $(this).removeClass('active');
-                $(this).siblings('div').removeClass('active').hide();
+                $(this).siblings('div').removeClass('active').slideUp();
             } else {
                 $(this).addClass('active');
-                $(this).siblings('div').addClass('active').show();
+                $(this).siblings('div').addClass('active').slideDown();
             }
         });
     }
