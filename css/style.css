@@ -1255,7 +1255,18 @@ h1, h2 {
 .product-header h1 {
   border-bottom: 1px solid black;
   padding-bottom: 0.6em;
-  margin-right: 0em; }
+  margin-right: 0em;
+  line-height: 42px; }
+
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap; }
+
+.flex-item {
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto; }
 
 .owl-prev,
 .owl-next {
