@@ -1369,6 +1369,10 @@ p.lead {
     font-size: 21px;
     line-height: 24px; }
 
+@media screen and (min-width: 55.5em) {
+  .face-styles > p {
+    width: 45%; } }
+
 .lens-info aside {
   display: inline-block;
   vertical-align: top; }

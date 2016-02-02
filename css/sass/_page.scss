@@ -177,6 +177,15 @@ p.lead {
     }
 }
 
+.face-styles {
+
+    > p {
+        @include breakpoint($tablet-mid) {
+            width: 45%;
+        }
+    }
+}
+
 .lens-info {
 
     aside {
