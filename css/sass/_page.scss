@@ -22,6 +22,7 @@ p.lead {
     // importants used to override specificity of base Rapha styles
     &__details {
         margin-top: 0 !important;
+        clear: both;
 
         @include breakpoint($tablet-mid) {
             margin-top: 1.5em !important;

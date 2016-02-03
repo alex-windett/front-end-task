@@ -75,13 +75,6 @@ module.exports = function(grunt) {
                 ],
                 tasks: ['concat']
     		},
-            imagemin: {
-                files: [
-                    'img/src/**/*.jpg',
-                    'img/src/**/*.png'
-                ],
-                tasks: ['imagemin']
-            },
             livereload: {
                 options: {
                     livereload: 35740
