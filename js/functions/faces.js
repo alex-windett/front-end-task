@@ -39,7 +39,7 @@ var defaultimages = {
                 $('.faces-set#' + faceStyle).find('.face-3').show();
                 $('.faces-set#' + faceStyle).find('.face-2').hide();
             } else {
-                // if in first third middle face
+                // if in middle third middle face
                 // console.log('this is the middle third');
                 $('.faces-set#' + faceStyle).find('.face-2').show();
                 $('.faces-set#' + faceStyle).find('.face-1').hide();
