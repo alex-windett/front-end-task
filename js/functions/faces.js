@@ -34,13 +34,13 @@ var defaultimages = {
                 $('.faces-set#' + faceStyle).find('.face-1').show();
                 $('.faces-set#' + faceStyle).find('.face-2').hide();
             } else if ( xPos >= lastThirdBoundary ) {
-                // if in first third show front forward face
-                // console.log('this is the middle third');
+                // if in last third show right angled face
+                // console.log('this is the last third');
                 $('.faces-set#' + faceStyle).find('.face-3').show();
                 $('.faces-set#' + faceStyle).find('.face-2').hide();
             } else {
-                // if in first third show right angled face
-                // console.log('this is the last third');
+                // if in first third middle face
+                // console.log('this is the middle third');
                 $('.faces-set#' + faceStyle).find('.face-2').show();
                 $('.faces-set#' + faceStyle).find('.face-1').hide();
                 $('.faces-set#' + faceStyle).find('.face-3').hide();
